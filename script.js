@@ -4,6 +4,7 @@ function openNav() {
 
 function closeNav() {
 	document.getElementById("side-nav").style.width = "0";
+
 }
 
 const APIKEY = "2271fbb427e2b1715a00dc5284c5bba9";
@@ -59,9 +60,12 @@ function showMovies(movies) {
 			if (btn1.classList.contains("active")) {
 				removeFromWatchList(id);
 				btn1.classList.remove("active");
+				fetchWatchList()
 			} else {
 				addToWatchList(id);
 				btn1.classList.add("active");
+				fetchWatchList()
+
 			}
 		});
 		main.appendChild(movieEl);
