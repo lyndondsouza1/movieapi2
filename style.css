@@ -111,6 +111,8 @@ nav {
 	border-radius: 5px;
 	text-align: center;
 	color: white;
+	background-color: #0d253f;
+
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 	overflow-y: hidden;
 }
@@ -154,20 +156,19 @@ nav {
 	flex-direction: row;
 }
 .footer h1 {
-	flex: 90%;
+}
+.footer h2 {
+	font-size: 12px;
 }
 .footer span {
-	flex: 10%;
 	margin: auto;
 	text-align: center;
-	align-items: center;
-	justify-content: center;
+	align-items:flex-end;
+	justify-content: flex-end;
 	background-color: rgba(0, 0, 0, 0.452);
-	/* 
 margin-left: 10px;
-padding-left: 30px;
- */
 	margin-right: 10px;
+	padding: 10px 10px;
 }
 
 .footer span.green {
@@ -182,7 +183,10 @@ padding-left: 30px;
 .btn1.active {
 	color: red;
 }
-
+.footer .content{
+	display: flex;
+	flex-direction: column;
+}
 #watchlistul {
 	list-style-type: none;
 	color: aqua;
@@ -265,70 +269,60 @@ padding-left: 30px;
 		font-size: 16px;
 		background-color: #0d253f;
 		color: white;
+		margin: 0;
 	}
 
-	.footer {
+.footer {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-bottom: 20px;
+		padding: 12px 12px;
+		font
 
+}
+.footer h1 {
+	font-size: 15px;
 
-		margin: 10px 10px;
-		padding: 5px 5px;
-		display:flex;
-		flex-direction: row;
-	}
-	.footer h1 {
-		width: 100%;
-		font-size: 15px;
-	}
-	.footer h2 {
-		width: 100%;
+	padding-bottom: 10px;
 
-		font-size: 12px;
-	}
-	.footer span {
-		width: 20px;
-		flex: 10%;
-		margin: auto;
-		background-color: #0d253f;
+}
+.footer h2 {
+	padding-bottom: 10px;
 
-		margin-right: 10px;
-	}
+}
+.footer span {
+	margin: auto;
+	text-align: center;
+	align-items:flex-end;
+	justify-content: flex-end;
+	background-color: rgba(0, 0, 0, 0.452);
+margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px 10px;
+}
 
-	.footer span.green {
-		color: green;
-		flex: 10%;
-		margin: auto;
-		background-color: #0d253f;
+.footer span.green {
+	color: green;
+}
+.footer span.orange {
+	color: orange;
+}
+.footer span.red {
+	color: red;
+}
+.btn1.active {
+	color: red;
+}
+.footer .content{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+}
 
-		margin-right: 10px;
-	}
-	.footer span.orange {
-		color: orange;
-		flex: 10%;
-		margin: auto;
-		background-color: #0d253f;
+#watchlistul {
+	list-style-type: none;
+	color: aqua;
+}
 
-		margin-right: 10px;
-	}
-	.footer span.red {
-		flex: 10%;
-		margin: auto;
-		background-color: #0d253f;
-
-		margin-right: 10px;
-		color: red;
-	}
-	.btn1.active {
-		color: red;
-	}
-
-	.footer .content {
-		justify-content: flex-end;
-		width: 100%;
-
-		z-index: 2;
-
-		display: flex;
-		flex-direction: column;
-		flex: 90%;
-	}
 }
