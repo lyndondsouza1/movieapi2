@@ -31,12 +31,16 @@ nav {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	background-color: rgba(0, 0, 0, 0.904);
-	color: aqua;
+	background-color: #0d253f;
+	color: white;
 }
 
 .brand {
 	padding: 15px;
+
+}
+.brand img{
+	width: 100%;
 }
 .nav-links {
 }

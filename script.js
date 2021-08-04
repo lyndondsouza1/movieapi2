@@ -24,6 +24,7 @@ async function getMovies(url) {
 	const resp = await fetch(url);
 	const respData = await resp.json();
 	showMovies(respData.results);
+	console.log(respData.results);
 }
 
 function getClassByRate(vote) {
@@ -39,7 +40,7 @@ function getClassByRate(vote) {
 function showMovies(movies) {
 	main.innerHTML = "";
 	movies.forEach((movie) => {
-		const { poster_path, title, vote_average, id } = movie;
+		const { poster_path, title, vote_average, id, release_date } = movie;
 		const movieEl = document.createElement("div");
 		movieEl.classList.add("movie-card");
 		movieEl.innerHTML = `
@@ -49,7 +50,11 @@ function showMovies(movies) {
 					
 				</div>
 				<div class="footer">
-					<h1>${title}</h1>
+				<div className="content">
+				<h1>${title}</h1>
+				<h2>${release_date}</h2>
+				</div>
+					
                     <span class="${getClassByRate(
 											vote_average
 										)}">${vote_average}</span>
@@ -60,12 +65,11 @@ function showMovies(movies) {
 			if (btn1.classList.contains("active")) {
 				removeFromWatchList(id);
 				btn1.classList.remove("active");
-				fetchWatchList()
+				fetchWatchList();
 			} else {
 				addToWatchList(id);
 				btn1.classList.add("active");
-				fetchWatchList()
-
+				fetchWatchList();
 			}
 		});
 		main.appendChild(movieEl);
