@@ -24,15 +24,9 @@ nav {
 	display: flex;
 justify-content: space-between;
     margin: 20px;
-	margin-top: 0;
 	font-size: 30px;
     padding: 15px;
 width: 100%;
-position:sticky;
-top: 0;
-z-index: 1;
-background-color: black;
-color: aqua;
 }
 
 .brand{
@@ -185,11 +179,12 @@ color: aqua;
 }
 
 @media screen and ( min-width: 650px) {
-
+/* .nav-links span {
+	display: none;
+} */
 .sidenav .close-btn{
 	display: none;
 }	
-
 
 .sidenav {
 	justify-content: center;
