@@ -14,27 +14,19 @@ body {
 	min-height: 100%;
 	background-repeat: no-repeat;
 	display: flex;
-	flex-direction: column;
+	flex-direction:column;
 	text-align: center;
 	justify-content: space-between;
 	align-items: center;
-	display: flex;
-	flex-direction: column;
 }
 
 nav {
 	display: flex;
 justify-content: space-between;
     margin: 20px;
-	margin-top: 0;
 	font-size: 30px;
     padding: 15px;
 width: 100%;
-position:sticky;
-top: 0;
-z-index: 1;
-background-color: black;
-color: aqua;
 }
 
 .brand{
@@ -59,7 +51,7 @@ color: aqua;
 	position: fixed;
 	z-index: 1;
 	top: 0;
-	left: 0;
+	right: 0;
 	overflow-x: hidden;
 	background-color: #111;
 	transition: 0.5s;
@@ -86,8 +78,11 @@ color: aqua;
 	border-radius: 50px;
 	border: 2px solid aqua;
 	padding: 10px;
+	outline: none;
 }
-
+.sidenav input:active {
+	outline: none;
+}
 #main {
 	text-align: center;
 	justify-content: space-between;
@@ -184,32 +179,38 @@ color: aqua;
 }
 
 @media screen and ( min-width: 650px) {
-<<<<<<< Updated upstream
-=======
 /* .nav-links span {
 	display: none;
 } */
-nav{
-	
-position:sticky;
-top: 0;
-z-index: 1;
-background-color: black;
-color: aqua;}
-
 .sidenav .close-btn{
 	display: none;
-
 }	
->>>>>>> Stashed changes
 
+.sidenav {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 350px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	overflow-x: hidden;
+	background-color: #111;
+	transition: 0.5s;
+	opacity: 0.9;
+}
 
 #main {
 	justify-content: space-between;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+	margin-right: 350px;
 }
+
 
 .movie-card {
 	flex: 20%;
