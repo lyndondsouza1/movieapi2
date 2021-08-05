@@ -125,7 +125,8 @@ nav {
 }
 .btn1 {
 	position: absolute;
-	top: 100%;
+	top: 97%;
+
 	left: 25%;
 	transform: translate(-50%, -50%);
 	padding: 12px 12px;
@@ -135,29 +136,39 @@ nav {
 	font-size: 16px;
 	background-color: #0d253f;
 	color: white;
+	z-index: 1;
+
 }
 .btn2 {
 	position: absolute;
-	top: 100%;
+	top: 97%;
+	padding: 12px 12px;
+
 	left: 75%;
 	transform: translate(-50%, -50%);
-	padding: 12px 12px;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
 	font-size: 16px;
-	background-color: #0d253f;
+	background-color: #0e263f;
 	color: white;
+	padding-bottom: 15px 15px;
+	margin-bottom: 5px;
 }
 
 .footer {
+	z-index: 3;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
 }
 .footer h1 {
+	margin-top: 2px;
+		margin-bottom: 2px;
 }
 .footer h2 {
+	margin-top: 2px;
+		margin-bottom: 2px;
 	font-size: 12px;
 }
 .footer span {
@@ -192,7 +203,62 @@ nav {
 	color: aqua;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 900px) {
+	.sidenav .close-btn {
+		display: none;
+	}
+
+	.sidenav {
+		background-color: #111;
+	}
+
+	#main {
+		flex-wrap: wrap;
+		flex-direction: row;
+		margin-right: 350px;
+	}
+
+	.movie-card {
+		flex: 30%;
+		width: 300px;
+		height: 25vw;
+		margin: 5px;
+		border-radius: 5px;
+		text-align: center;
+	}
+	.img-container {
+		padding-bottom: 5px;
+		margin-bottom: 10px 20px;
+	}
+	.movie-card img {
+		width: 100%;
+		height: 15vw;
+		object-fit: cover;
+	}
+
+	.footer {
+		margin:5px;
+
+		margin-bottom: 20px;
+		padding: 12px 12px;
+	}
+	.footer h1 {
+		margin-top: 2px;
+		margin-bottom: 2px;
+		font-size: 15px;
+
+		padding-bottom: 10px;
+	}
+	.footer h2 {
+		margin-top: 2px;
+		margin-bottom: 2px;
+	}
+
+	.footer .content {
+		padding-bottom: 10px;
+	}
+}
+@media screen and (min-width: 1500px) {
 	.sidenav .close-btn {
 		display: none;
 	}
@@ -210,7 +276,7 @@ nav {
 	.movie-card {
 		flex: 20%;
 		width: 250px;
-		height: 20vw;
+		height: 22vw;
 		margin: 5px;
 		border-radius: 5px;
 		text-align: center;
@@ -229,14 +295,7 @@ nav {
 		margin-bottom: 20px;
 		padding: 12px 12px;
 	}
-	.footer h1 {
-		font-size: 15px;
-
-		padding-bottom: 10px;
-	}
-	.footer h2 {
-		padding-bottom: 10px;
-	}
+	
 
 	.footer .content {
 		padding-bottom: 10px;
